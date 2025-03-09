@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<launch>
+    <arg name="file_path" default="open_stationary.ubx" />
+    <node name="rtk_gps_driver" pkg="rtk_gps_driver" type="standalone_driver.py" output="screen" args="$(find rtk_gps_driver)/../data/raw_rtk_data/$(arg file_path)">
+    </node>
+</launch>
